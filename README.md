@@ -10,7 +10,7 @@ Container to prepare environment for OIPv3 Back End and Installer Functions:
  5. Jupyter Notebook (for Debugging and Testing)
 
 ## Installation (with Debugger)
-docker run -d -p 4505:4505 4506:4506 8801:8888 hkarhani/oipv3-be
+
 
 ## Release History
 
