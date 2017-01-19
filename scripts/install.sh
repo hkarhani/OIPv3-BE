@@ -1,6 +1,8 @@
 #!/bin/bash
 set -x
 
+REPO="OIPv3-BE"
+
 # create new ssh key
 [[ ! -f /home/ubuntu/.ssh/mykey ]] \
 && mkdir -p /home/ubuntu/.ssh \
@@ -25,7 +27,9 @@ fi
 
 # Install Jupyter Notebook
 pip install jupyter
-git clone https://github.com/hkarhani/OIPv3-BE.git
+git clone https://github.com/hkarhani/$REPO.git
+cd $REPO 
+mv config/jupyter_notebook_config.py /home/ubuntu/.jupyter/jupyter_notebook_config.py
 
 
 
