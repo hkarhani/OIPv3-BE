@@ -28,10 +28,13 @@ fi
 # Install Jupyter Notebook
 pip install jupyter
 git clone https://github.com/hkarhani/$REPO.git
-cd $REPO 
+cd $REPO
+mkdir -p /home/ubuntu/.jupyter/
 mv config/jupyter_notebook_config.py /home/ubuntu/.jupyter/jupyter_notebook_config.py
+nohup jupyter notebook &
 
-
+# Install jccp
+docker pull hkarhani/jccp 
 
 
 # clean up
